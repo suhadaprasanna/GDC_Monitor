@@ -1,0 +1,22 @@
+server:
+  port: 8761
+
+spring:
+  application:
+    name: gdc-service-monitor
+
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+  server:
+    response-cache-update-interval-ms: 5000
+    
+logging:
+  config: classpath:./logback-spring.xml
+  
+log:
+  path: D:/var/logs/${spring.application.name}
+  level:
+    root: INFO
+    gdc: TRACE
